@@ -17,7 +17,8 @@ Console.WriteLine($"Seu cpf é : {cliente.Cpf}");
 
 
 
-Agencia agencia = new Agencia();
+
+Agencia agencia = new Agencia(); // Metodo construtor pois tem o mesmo nome da classe
 
 agencia.Numero = "3010";
 Console.WriteLine($"Sua agencia é : {agencia.Numero}");
