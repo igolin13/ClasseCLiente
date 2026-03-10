@@ -3,6 +3,8 @@
 
 using Conceitos;
 
+// # CLIENTE
+
 Console.WriteLine("Bem vindo ao seu perfil no Nubank!");
 
 
@@ -21,7 +23,7 @@ Console.WriteLine($"Olá {cliente.Nome} !");
 Console.WriteLine($"Seu cpf é : {cliente.Cpf} !");
 
 
-
+// AGENCIA
 
 Agencia agencia = new Agencia(2087); // Metodo construtor pois tem o mesmo nome da classe
 
@@ -35,5 +37,19 @@ agencia.Telefone = "24992778679";
 Console.WriteLine($"Seu numero de telefone é : {agencia.Telefone}");
 
 Console.WriteLine("Obrigado pela consulta!");
+
+
+
+// # CONTA
+
+Conta conta = new Conta(12,0);
+Console.WriteLine($"O numero da sua conta é {conta.Numero}");
+Console.WriteLine($"O saldo da sua conta é {conta.Saldo}");
+
+
+
+
+
+
 
 
