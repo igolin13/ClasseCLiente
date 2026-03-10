@@ -6,21 +6,26 @@ using Conceitos;
 Console.WriteLine("Bem vindo ao seu perfil no Nubank!");
 
 
-Cliente cliente;
-cliente = new Cliente();
-
-cliente.Nome = "Iguin bariloche";
-Console.WriteLine($"Nome do cliente : {cliente.Nome}");
-
-cliente.Cpf = "21682195759";
-Console.WriteLine($"Seu cpf é : {cliente.Cpf}");
+Console.WriteLine("Informe o nome do cliente");
+string nome = Console.ReadLine();
 
 
+Console.WriteLine("Informe o cpf do cliente");
+string cpf = Console.ReadLine();
 
 
-Agencia agencia = new Agencia(); // Metodo construtor pois tem o mesmo nome da classe
+Cliente cliente = new Cliente(nome,cpf);
 
-agencia.Numero = "3010";
+
+Console.WriteLine($"Olá {cliente.Nome} !");
+Console.WriteLine($"Seu cpf é : {cliente.Cpf} !");
+
+
+
+
+Agencia agencia = new Agencia(2087); // Metodo construtor pois tem o mesmo nome da classe
+
+
 Console.WriteLine($"Sua agencia é : {agencia.Numero}");
 
 agencia.Nome = "Conta Corrente";

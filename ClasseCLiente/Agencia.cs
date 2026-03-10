@@ -8,53 +8,19 @@ namespace Conceitos
 {
     public class Agencia
     {
-        private string _numero;
+        private int _numero;
         private string _nome; 
         private string _telefone;
 
-        public string Numero
-        {
-            get
-            {
-                return _numero;
-            }
-            set
-            {
-
-                if (value.Length == 4)
-                {
-
-                    _numero = value;
-
-                }
-
-                else
-                {
-                    throw new Exception("O numero da agencia nao pode estar vazio");
-
-                }
-            }
-        }
-
-        
 
         public string Nome
         {
-            get
-            {
-                return _nome;
-            }
+            get => _nome;
+            
             set
             {
-
-                if (value.Length != 0)
-                {
-                    _nome = value;
-                }
-                else
-                {
-                    throw new Exception("O nome nao pode estar vazio");
-                }
+                _nome = value;
+             
             }
         }
 
@@ -62,22 +28,23 @@ namespace Conceitos
 
         public string Telefone
         {
-            get
-            {
-                return _telefone;
-            }
+            get => _telefone;
+            
+          
             set
             {
 
-                if (value.Length == 11)
-                {
-                    _telefone = value;
-                }
-                else
-                {
-                    throw new Exception("O numero de telefone tem que ter 10 digitos");
-                }
+               _telefone = value;
             }
+        }
+
+        public int Numero{ 
+            get => _numero;
+            private set 
+            {
+                _numero = value;
+            }
+        
         }
 
         public Agencia(int numero)

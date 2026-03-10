@@ -13,21 +13,11 @@ namespace Conceitos
 
         public string Nome
         {
-            get
-            {
-                return _nome;
-            }
+            get => _nome;
+            
             set
             {
-                if (value.Length != 0)
-                {
-                    _nome = value;
-                }
-                else
-                {
-                    throw new Exception("O nome nao pode estar vazio");
-                }
-
+                _nome = value;
             }
 
 
@@ -37,31 +27,21 @@ namespace Conceitos
 
         public string Cpf
         {
-            get
-            {
-                return _cpf;
-            }
+            get => _cpf;
+            
 
             set
             {
-
-                if (value.Length == 11)
-                {
-
-                    _cpf = value;
-
-                }
-
-                else
-                {
-                    throw new Exception("O cpf nao ter menos de 11 caracteres");
-
-                }
+                _cpf = value;
 
             }
         }
 
-
+        public Cliente(string nome, string cpf)
+        {
+            _nome = nome;
+            _cpf = cpf;
+        }
 
 
     }
