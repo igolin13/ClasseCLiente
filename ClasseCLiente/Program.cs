@@ -2,6 +2,7 @@
 
 
 using Conceitos;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 // # CLIENTE
 
@@ -42,11 +43,39 @@ Console.WriteLine("Obrigado pela consulta!");
 
 // # CONTA
 
-Conta conta = new Conta(12,0);
-Console.WriteLine($"O numero da sua conta é {conta.Numero}");
-Console.WriteLine($"O saldo da sua conta é {conta.Saldo}");
+Console.WriteLine("Digite o numero da sua conta");
+long numero = long.Parse(Console.ReadLine());
+
+Console.WriteLine("Digite o saldo inicial da sua conta");
+decimal saldo = decimal.Parse(Console.ReadLine());
 
 
+Console.WriteLine($"Seu saldo é : {saldo}");
+
+Console.WriteLine();
+
+// # DEPOSITAR
+
+Console.WriteLine("Digite o valor que voce quer depositar em sua conta");
+decimal depositar = decimal.Parse(Console.ReadLine());
+
+saldo = saldo + depositar;
+
+Console.WriteLine($"Seu saldo é : {saldo}");
+
+
+// # SACAR  
+
+
+Console.WriteLine("Digite o valor que voce quer sacar em sua conta");
+decimal sacar = decimal.Parse(Console.ReadLine());
+
+saldo = saldo - sacar;
+
+Console.WriteLine($"Seu saldo é : {saldo}");
+
+
+Conta conta = new Conta(numero, saldo);
 
 
 
