@@ -51,53 +51,33 @@ Console.WriteLine();
 
 // # CONTA
 
+
+
 Console.WriteLine("Digite o numero da sua conta");
 long numero = long.Parse(Console.ReadLine());
 
 Console.WriteLine("Digite o saldo inicial da sua conta");
-decimal saldo = decimal.Parse(Console.ReadLine());
+decimal saldoin = decimal.Parse(Console.ReadLine());
+
+
+Conta conta = new Conta(numero, saldoin);
 
 
 
 
-
-
-Console.WriteLine($"Seu saldo é : {saldo}");
-
-
-Console.WriteLine();
-Console.WriteLine();
-
-// # DEPOSITAR
-
-Console.WriteLine("Digite o valor que voce quer depositar em sua conta");
-decimal depositar = decimal.Parse(Console.ReadLine());
-
-saldo = saldo + depositar;
-
-Console.WriteLine($"Seu saldo é : {saldo}");
+Console.WriteLine($"Seu saldo é : {saldoin}");
 
 
 
+conta.Deposito(1000);
+
+Console.WriteLine($"Seu saldo é : {saldoin}");
+
+conta.Saque(500);
+
+Console.WriteLine($"Seu saldo é : {saldoin}");
 
 
-
-Console.WriteLine();
-Console.WriteLine();
-
-
-// # SACAR  
-
-
-Console.WriteLine("Digite o valor que voce quer sacar em sua conta");
-decimal sacar = decimal.Parse(Console.ReadLine());
-
-saldo = saldo - sacar;
-
-Console.WriteLine($"Seu saldo é : {saldo}");
-
-
-Conta conta = new Conta(numero, saldo);
 
 
 

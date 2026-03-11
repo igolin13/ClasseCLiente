@@ -8,6 +8,14 @@ namespace Conceitos
 {
     public class Conta
     {
+
+        public Conta(long numero, decimal saldo)
+        {
+            _saldo = saldo;
+            _numero = numero;
+
+        }
+
         private long _numero;
         private decimal _saldo;
 
@@ -15,7 +23,7 @@ namespace Conceitos
         {
             get => _numero;
 
-            set {
+            private set {
                 _numero = value;
             }
 
@@ -30,20 +38,15 @@ namespace Conceitos
             }
         }
 
-        public Conta(long numero, decimal saldo)
-        {
-            _saldo = saldo;
-            _numero = numero;
-
-        }
+       
 
         public void Deposito(decimal valor)
         {
-           
+            _saldo += valor;
         }
         public void Saque(decimal valor)
         {
-
+          _saldo -= valor;
         }
 
     }
