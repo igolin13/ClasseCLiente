@@ -21,14 +21,21 @@ Cliente cliente = new Cliente(nome,cpf);
 
 
 Console.WriteLine($"Olá {cliente.Nome} !");
-Console.WriteLine($"Seu cpf é : {cliente.Cpf} !");
+
+
+
+Console.WriteLine();
+Console.WriteLine();
+
+
+
 
 
 // AGENCIA
 
 Agencia agencia = new Agencia(2087); // Metodo construtor pois tem o mesmo nome da classe
 
-
+Console.WriteLine($"Olá {cliente.Nome} !");
 Console.WriteLine($"Sua agencia é : {agencia.Numero}");
 
 agencia.Nome = "Conta Corrente";
@@ -37,8 +44,9 @@ Console.WriteLine($"Sua conta é do tipo : {agencia.Nome}");
 agencia.Telefone = "24992778679";
 Console.WriteLine($"Seu numero de telefone é : {agencia.Telefone}");
 
-Console.WriteLine("Obrigado pela consulta!");
 
+Console.WriteLine();
+Console.WriteLine();
 
 
 // # CONTA
@@ -50,8 +58,14 @@ Console.WriteLine("Digite o saldo inicial da sua conta");
 decimal saldo = decimal.Parse(Console.ReadLine());
 
 
+
+
+
+
 Console.WriteLine($"Seu saldo é : {saldo}");
 
+
+Console.WriteLine();
 Console.WriteLine();
 
 // # DEPOSITAR
@@ -62,6 +76,14 @@ decimal depositar = decimal.Parse(Console.ReadLine());
 saldo = saldo + depositar;
 
 Console.WriteLine($"Seu saldo é : {saldo}");
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine();
 
 
 // # SACAR  
